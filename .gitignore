@@ -1,0 +1,8 @@
+# Compiled files
+dist
+
+# Tools
+.vscode
+
+# OS files
+.DS_Store

@@ -1,0 +1,33 @@
+{
+  "name": "eleventy-pdf",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Scott Vandehey",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "yarn watch",
+    "build": "run-p build:*",
+    "build:content": "eleventy",
+    "build:css": "sass src:dist",
+    "watch": "run-p watch:*",
+    "watch:content": "eleventy --serve",
+    "watch:css": "sass --watch src:dist",
+    "lint": "run-s lint:css lint:prettier",
+    "lint:check": "run-s lint:*:check",
+    "lint:css": "stylelint --fix '**/*.{css,scss}'",
+    "lint:css:check": "stylelint '**/*.{css,scss}'",
+    "lint:prettier": "prettier . --write",
+    "lint:prettier:check": "prettier . --check"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "2.0.1",
+    "markdown-it-anchor": "8.6.7",
+    "markdown-it-footnote": "^3.0.3",
+    "npm-run-all": "4.1.5",
+    "prettier": "3.0.0",
+    "sass": "1.64.1",
+    "stylelint": "15.10.2",
+    "stylelint-config-prettier": "9.0.5",
+    "stylelint-config-spaceninja": "13.0.1"
+  }
+}
