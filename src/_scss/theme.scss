@@ -1,3 +1,17 @@
+:root {
+  --color-bg: #fff;
+  --color-fg: #333;
+  --color-link: #34d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #121212;
+    --color-fg: #e3e3e3;
+    --color-link: #bb86fc;
+  }
+}
+
 html {
   box-sizing: border-box;
   color-scheme: light dark;
@@ -10,10 +24,16 @@ html {
 }
 
 body {
+  background: var(--color-bg);
+  color: var(--color-fg);
   font-family: Merriweather, serif;
   font-size: 18px;
   line-height: 1.75;
   margin: 1em;
+}
+
+a {
+  color: var(--color-link);
 }
 
 main {
