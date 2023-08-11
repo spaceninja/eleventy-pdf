@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap';
+
 :root {
   --color-bg: #fff;
   --color-fg: #333;
@@ -37,8 +39,8 @@ a {
 }
 
 main {
+  margin: 0 auto;
   margin-bottom: 2em;
-  margin-inline: auto;
   max-width: 60ch;
 
   // text-align: justify;
@@ -55,8 +57,8 @@ h3 {
 }
 
 p {
-  margin-block: 0.25em;
-  text-indent: 3ch;
+  margin: 0.25em 0;
+  text-indent: 2em;
 
   &:first-of-type {
     text-indent: 0;
@@ -64,7 +66,7 @@ p {
 }
 
 .credits {
-  margin-block: 1em;
+  margin: 1em 0;
   text-align: center;
   text-indent: 0;
 }
@@ -144,7 +146,7 @@ figcaption {
   display: flex;
   gap: 1em;
   justify-content: space-between;
-  margin-block: 1em;
+  margin: 1em 0;
 }
 
 .chapter-nav__toc {
