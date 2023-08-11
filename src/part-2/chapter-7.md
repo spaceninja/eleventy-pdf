@@ -1,16 +1,14 @@
 ---
-layout: layout.njk
+layout: chapter.njk
 chapter: VII
 title: The Conclusion
 tags:
   - chapters
   - partTwo
 date: 1887-02-07
-show_nav: true
-prev: 2-6
+showNav: true
+prev: chapter-6
 ---
-
-### Chapter {{chapter}}: {{ title }}
 
 We had all been warned to appear before the magistrates upon the Thursday; but when the Thursday came there was no occasion for our testimony. A higher Judge had taken the matter in hand, and Jefferson Hope had been summoned before a tribunal where strict justice would be meted out to him. On the very night after his capture the aneurism burst, and he was found in the morning stretched upon the floor of the cell, with a placid smile upon his face, as though he had been able in his dying moments to look back upon a useful life, and on work well done.
 

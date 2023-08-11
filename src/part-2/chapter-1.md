@@ -1,21 +1,16 @@
 ---
-layout: layout.njk
+layout: chapter.njk
 chapter: I
 title: On the Great Alkali Plain
 tags:
   - chapters
   - partTwo
 date: 1887-02-01
-show_nav: true
-prev: 1-7
-next: 2-2
+showNav: true
+showPartTitle: true
+prev: ../part-1/chapter-7
+next: chapter-2
 ---
-
-## Part II.
-
-_The Country of the Saints._
-
-### Chapter {{chapter}}: {{ title }}
 
 In the central portion of the great North American Continent there lies an arid and repulsive desert, which for many a long year served as a barrier against the advance of civilisation. From the Sierra Nevada to Nebraska, and from the Yellowstone River in the north to the Colorado upon the south, is a region of desolation and silence. Nor is Nature always in one mood throughout this grim district. It comprises snow-capped and lofty mountains, and dark and gloomy valleys. There are swift-flowing rivers which dash through jagged cañons; and there are enormous plains, which in winter are white with snow, and in summer are grey with the saline alkali dust. They all preserve, however, the common characteristics of barrenness, inhospitality, and misery.
 

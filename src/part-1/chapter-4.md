@@ -1,17 +1,15 @@
 ---
-layout: layout.njk
+layout: chapter.njk
 chapter: IV
 title: What John Rance had to Tell
 tags:
   - chapters
   - partOne
 date: 1887-01-04
-show_nav: true
-prev: 1-3
-next: 1-5
+showNav: true
+prev: chapter-3
+next: chapter-5
 ---
-
-### Chapter {{chapter}}: {{ title }}
 
 It was one o’clock when we left No. 3, Lauriston Gardens. Sherlock Holmes led me to the nearest telegraph office, whence he dispatched a long telegram. He then hailed a cab, and ordered the driver to take us to the address given us by Lestrade.
 

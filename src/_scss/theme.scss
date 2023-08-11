@@ -132,6 +132,14 @@ figcaption {
   text-align: center;
 }
 
+.chapter-title {
+  text-align: center;
+
+  strong {
+    display: block;
+  }
+}
+
 .chapter-nav {
   display: flex;
   gap: 1em;

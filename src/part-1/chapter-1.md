@@ -1,24 +1,15 @@
 ---
-layout: layout.njk
+layout: chapter.njk
 chapter: I
 title: Mr. Sherlock Holmes
 tags:
   - chapters
   - partOne
 date: 1887-01-01
-show_nav: true
-next: 1-2
+showNav: true
+showPartTitle: true
+next: chapter-2
 ---
-
-<header class="part-header">
-
-## Part I.
-
-_(Being a Reprint from the Reminiscences of *John H. Watson, M.D.*, late of the Army Medical Department.)_
-
-</header>
-
-### Chapter {{chapter}}: {{ title }}
 
 In the year 1878 I took my degree of Doctor of Medicine of the University of London, and proceeded to Netley to go through the course prescribed for surgeons in the army. Having completed my studies there, I was duly attached to the Fifth Northumberland Fusiliers as Assistant Surgeon. The regiment was stationed in India at the time, and before I could join it, the second Afghan war had broken out. On landing at Bombay, I learned that my corps had advanced through the passes, and was already deep in the enemy’s country. I followed, however, with many other officers who were in the same situation as myself, and succeeded in reaching Candahar in safety, where I found my regiment, and at once entered upon my new duties.
 

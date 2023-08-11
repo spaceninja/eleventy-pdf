@@ -1,0 +1,25 @@
+---
+layout: layout.njk
+eleventyComputed:
+  title: 'Part {{ currentPart }}'
+---
+
+<h2>Contents</h2>
+
+<section>
+  <header class="toc-header">
+    <h3>Part {{ currentPart }}.</h3>
+    <p>
+      <i>{{ parts[currentPart].title }}</i>
+    </p>
+  </header>
+  <ol type="I">
+    {% for chapter in collections.partTwo %}
+      <li>
+        <a href="{{ chapter.page.url }}">
+          {{ chapter.data.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ol>
+</section>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{ title }} - A Study in Scarlet</title>
+  <title>{% if chapter %}Chapter {{ chapter }}: {% endif %}{{ title }}{% if title %}, {% endif %}A Study in Scarlet</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
   </main>
   <hr />
   <footer class="footer">
-    {% if show_nav %}
+    {% if showNav %}
     <nav class="chapter-nav">
       <div class="chapter-nav__item chapter-nav__prev{% if not prev %} is-disabled{% endif %}">
         {% if prev %}
@@ -33,7 +33,7 @@
         {% endif %}
       </div>
       <div class="chapter-nav__item chapter-nav__toc">
-        <a class="chapter-nav__link" href="../">Table of Contents</a>
+        <a class="chapter-nav__link" href="/">Table of Contents</a>
       </div>
       <div class="chapter-nav__item chapter-nav__next{% if not next %} is-disabled{% endif %}">
         {% if next %}

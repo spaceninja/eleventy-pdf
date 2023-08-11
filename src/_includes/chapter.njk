@@ -1,0 +1,25 @@
+---
+layout: layout.njk
+---
+
+{% if showPartTitle %}
+  <header class="part-header">
+    <h2
+      id="pt-{{ currentPart}}"
+      >
+      Part {{ currentPart }}.
+    </h2>
+    <p><em>{{ parts[currentPart].title }}</em></p>
+  </header>
+  <hr>
+{% endif %}
+
+<h3
+  class="chapter-title"
+  id="ch-{{ chapter }}-{{ title | slugify }}"
+  >
+  <strong>Chapter {{ chapter }}:</strong>
+  {{ title }}
+</h3>
+
+{{ content | safe }}

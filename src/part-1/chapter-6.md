@@ -1,17 +1,15 @@
 ---
-layout: layout.njk
+layout: chapter.njk
 chapter: VI
 title: Tobias Gregson Shows What he Can do
 tags:
   - chapters
   - partOne
 date: 1887-01-06
-show_nav: true
-prev: 1-5
-next: 1-7
+showNav: true
+prev: chapter-5
+next: chapter-7
 ---
-
-### Chapter {{chapter}}: {{ title }}
 
 The papers next day were full of the “Brixton Mystery,” as they termed it. Each had a long account of the affair, and some had leaders upon it in addition. There was some information in them which was new to me. I still retain in my scrap-book numerous clippings and extracts bearing upon the case. Here is a condensation of a few of them:—
 

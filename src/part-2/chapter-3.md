@@ -1,17 +1,15 @@
 ---
-layout: layout.njk
+layout: chapter.njk
 chapter: III
 title: John Ferrier Talks with the Prophet
 tags:
   - chapters
   - partTwo
 date: 1887-02-03
-show_nav: true
-prev: 2-2
-next: 2-4
+showNav: true
+prev: chapter-2
+next: chapter-4
 ---
-
-### Chapter {{chapter}}: {{ title }}
 
 Three weeks had passed since Jefferson Hope and his comrades had departed from Salt Lake City. John Ferrier’s heart was sore within him when he thought of the young man’s return, and of the impending loss of his adopted child. Yet her bright and happy face reconciled him to the arrangement more than any argument could have done. He had always determined, deep down in his resolute heart, that nothing would ever induce him to allow his daughter to wed a Mormon. Such a marriage he regarded as no marriage at all, but as a shame and a disgrace. Whatever he might think of the Mormon doctrines, upon that one point he was inflexible. He had to seal his mouth on the subject, however, for to express an unorthodox opinion was a dangerous matter in those days in the Land of the Saints.
 

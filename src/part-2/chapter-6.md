@@ -1,17 +1,15 @@
 ---
-layout: layout.njk
+layout: chapter.njk
 chapter: VI
 title: A Continuation of the Reminiscences of John H. Watson, M.D.
 tags:
   - chapters
   - partTwo
 date: 1887-02-06
-show_nav: true
-prev: 2-5
-next: 2-7
+showNav: true
+prev: chapter-5
+next: chapter-7
 ---
-
-### Chapter {{chapter}}: {{ title }}
 
 Our prisoner’s furious resistance did not apparently indicate any ferocity in his disposition towards ourselves, for on finding himself powerless, he smiled in an affable manner, and expressed his hopes that he had not hurt any of us in the scuffle. “I guess you’re going to take me to the police-station,” he remarked to Sherlock Holmes. “My cab’s at the door. If you’ll loose my legs I’ll walk down to it. I’m not so light to lift as I used to be.”
 

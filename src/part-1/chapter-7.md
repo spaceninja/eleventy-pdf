@@ -1,17 +1,15 @@
 ---
-layout: layout.njk
+layout: chapter.njk
 chapter: VII
 title: Light in the Darkness
 tags:
   - chapters
   - partOne
 date: 1887-01-07
-show_nav: true
-prev: 1-6
-next: 2-1
+showNav: true
+prev: chapter-6
+next: ../part-2/chapter-1
 ---
-
-### Chapter {{chapter}}: {{ title }}
 
 The intelligence with which Lestrade greeted us was so momentous and so unexpected, that we were all three fairly dumfoundered. Gregson sprang out of his chair and upset the remainder of his whiskey and water. I stared in silence at Sherlock Holmes, whose lips were compressed and his brows drawn down over his eyes.
 

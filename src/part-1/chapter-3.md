@@ -1,17 +1,15 @@
 ---
-layout: layout.njk
+layout: chapter.njk
 chapter: III
 title: The Lauriston Gardens Mystery
 tags:
   - chapters
   - partOne
 date: 1887-01-03
-show_nav: true
-prev: 1-2
-next: 1-4
+showNav: true
+prev: chapter-2
+next: chapter-4
 ---
-
-### Chapter {{chapter}}: {{ title }}
 
 I confess that I was considerably startled by this fresh proof of the practical nature of my companion’s theories. My respect for his powers of analysis increased wondrously. There still remained some lurking suspicion in my mind, however, that the whole thing was a pre-arranged episode, intended to dazzle me, though what earthly object he could have in taking me in was past my comprehension. When I looked at him he had finished reading the note, and his eyes had assumed the vacant, lack-lustre expression which showed mental abstraction.
 

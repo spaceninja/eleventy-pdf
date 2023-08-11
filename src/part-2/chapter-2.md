@@ -1,17 +1,15 @@
 ---
-layout: layout.njk
+layout: chapter.njk
 chapter: II
 title: The Flower of Utah
 tags:
   - chapters
   - partTwo
 date: 1887-02-02
-show_nav: true
-prev: 2-1
-next: 2-3
+showNav: true
+prev: chapter-1
+next: chapter-3
 ---
-
-### Chapter {{chapter}}: {{ title }}
 
 This is not the place to commemorate the trials and privations endured by the immigrant Mormons before they came to their final haven. From the shores of the Mississippi to the western slopes of the Rocky Mountains they had struggled on with a constancy almost unparalleled in history. The savage man, and the savage beast, hunger, thirst, fatigue, and disease—every impediment which Nature could place in the way, had all been overcome with Anglo-Saxon tenacity. Yet the long journey and the accumulated terrors had shaken the hearts of the stoutest among them. There was not one who did not sink upon his knees in heartfelt prayer when they saw the broad valley of Utah bathed in the sunlight beneath them, and learned from the lips of their leader that this was the promised land, and that these virgin acres were to be theirs for evermore.
 
