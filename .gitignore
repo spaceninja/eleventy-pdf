@@ -1,3 +1,6 @@
+# Environment Variables
+.env
+
 # Compiled files
 dist
 
