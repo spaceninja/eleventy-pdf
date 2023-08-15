@@ -1,5 +1,5 @@
 ---
-layout: chapter.njk
+layout: layouts/chapter.njk
 chapter: III
 title: John Ferrier Talks with the Prophet
 tags:

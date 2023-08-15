@@ -1,0 +1,40 @@
+---
+layout: "layouts/base.njk"
+eleventyComputed:
+  title: "{{ header.title }}"
+---
+
+{#
+	This page contains all the pages in the site, for the purpose of generating
+	a single PDF that we can add a table of contents and page numbers to.
+#}
+{% include 'title-page.njk' %}
+{% include 'frontispiece.njk' %}
+<article>
+  <nav>
+    <h2 id="contents">Contents</h2>
+    <ul>
+      {% for chapter in collections.chapters %}
+        <li>
+          <span>
+            <a href="#{{ chapter.page.url }}">
+              {{ chapter.data.title }}
+            </a>
+          </span>
+          -
+          <span>
+            <a href="#{{ chapter.page.url }}">
+              <span class="u-hiddenVisually">Page </span>
+            </a>
+          </span>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</article>
+{% for chapterObject in collections.chapters %}
+<article>
+  {% include 'chapter-header.njk' %}
+  {{ chapterObject.content | safe }}
+</article>
+{% endfor %}

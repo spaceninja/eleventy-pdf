@@ -1,5 +1,5 @@
 ---
-layout: chapter.njk
+layout: layouts/chapter.njk
 chapter: IV
 title: A Flight for Life
 tags:

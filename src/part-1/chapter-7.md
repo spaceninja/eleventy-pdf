@@ -1,5 +1,5 @@
 ---
-layout: chapter.njk
+layout: layouts/chapter.njk
 chapter: VII
 title: Light in the Darkness
 tags:

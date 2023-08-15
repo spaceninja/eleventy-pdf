@@ -1,5 +1,5 @@
 ---
-layout: chapter.njk
+layout: layouts/chapter.njk
 chapter: IV
 title: What John Rance had to Tell
 tags:

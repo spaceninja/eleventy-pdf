@@ -1,5 +1,5 @@
 ---
-layout: chapter.njk
+layout: layouts/chapter.njk
 chapter: I
 title: Mr. Sherlock Holmes
 tags:

@@ -1,5 +1,5 @@
 ---
-layout: chapter.njk
+layout: layouts/chapter.njk
 chapter: VI
 title: Tobias Gregson Shows What he Can do
 tags:

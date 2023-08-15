@@ -1,0 +1,6 @@
+.print-only {
+  display: none;
+  @media print {
+    display: block;
+  }
+}

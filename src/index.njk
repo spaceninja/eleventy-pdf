@@ -1,58 +1,10 @@
 ---
-layout: layout.njk
+layout: layouts/base.njk
 main_class: toc
 ---
 
-<h1 id="a-study-in-scarlet">A Study in Scarlet</h1>
-<p class="credits">By A. Conan Doyle</p>
-<p class="credits">With numerous original engravings by D.H. Friston.</p>
+{% include 'title-page.njk' %}
 
-<figure>
-  <img
-    src="/images/frontispiece.png"
-    alt="Illustration of Sherlock Holmes examining the word “Rache” on the wall with a magnifying glass."
-    width="904"
-    height="1489"
-  >
-  <figcaption>
-    <p>“He examined with his glass the word upon the wall, going over every letter of it with the most minute exactness.”</p>
-  </figcaption>
-</figure>
+{% include 'frontispiece.njk' %}
 
-<h2 id="contents">Contents</h2>
-
-<section>
-  <header class="toc-header">
-    <h3>Part I.</h3>
-    <p>
-      <i>{{ parts['I'].title }}</i>
-    </p>
-  </header>
-  <ol type="I">
-    {% for chapter in collections.partOne %}
-      <li>
-        <a href="{{ chapter.page.url }}">
-          {{ chapter.data.title }}
-        </a>
-      </li>
-    {% endfor %}
-  </ol>
-</section>
-
-<section>
-  <header class="toc-header">
-    <h3>Part II.</h3>
-    <p>
-      <i>{{ parts['I'].title }}</i>
-    </p>
-  </header>
-  <ol type="I">
-    {% for chapter in collections.partTwo %}
-      <li>
-        <a href="{{ chapter.page.url }}">
-          {{ chapter.data.title }}
-        </a>
-      </li>
-    {% endfor %}
-  </ol>
-</section>
+{% include 'contents.njk' %}

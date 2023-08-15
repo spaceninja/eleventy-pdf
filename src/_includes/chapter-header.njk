@@ -1,6 +1,7 @@
----
-layout: layout.njk
----
+{% set showPartTitle = showPartTitle or chapterObject.data.showPartTitle %}
+{% set currentPart = currentPart or chapterObject.data.currentPart %}
+{% set chapter = chapter or chapterObject.data.chapter %}
+{% set title = title or chapterObject.data.title %}
 
 {% if showPartTitle %}
   <header class="part-header">
@@ -21,5 +22,3 @@ layout: layout.njk
   <strong>Chapter {{ chapter }}:</strong>
   {{ title }}
 </h3>
-
-{{ content | safe }}

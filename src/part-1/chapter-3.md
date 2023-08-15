@@ -1,5 +1,5 @@
 ---
-layout: chapter.njk
+layout: layouts/chapter.njk
 chapter: III
 title: The Lauriston Gardens Mystery
 tags:

@@ -15,6 +15,8 @@
     "watch:css": "sass --watch src:dist",
     "lint": "run-s lint:css lint:prettier",
     "lint:check": "run-s lint:*:check",
+    "lint:js": "eslint . --fix",
+    "lint:js:check": "eslint .",
     "lint:css": "stylelint --fix '**/*.{css,scss}'",
     "lint:css:check": "stylelint '**/*.{css,scss}'",
     "lint:prettier": "prettier . --write",
@@ -23,6 +25,8 @@
   "devDependencies": {
     "@11ty/eleventy": "2.0.1",
     "dotenv": "16.3.1",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
     "globby": "13.2.2",
     "markdown-it-footnote": "3.0.3",
     "node-fetch": "3.3.2",

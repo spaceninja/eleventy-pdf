@@ -1,5 +1,5 @@
 ---
-layout: chapter.njk
+layout: layouts/chapter.njk
 chapter: V
 title: Our Advertisement Brings a Visitor
 tags:

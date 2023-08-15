@@ -1,5 +1,5 @@
 ---
-layout: chapter.njk
+layout: layouts/chapter.njk
 chapter: VI
 title: A Continuation of the Reminiscences of John H. Watson, M.D.
 tags:
