@@ -3,7 +3,6 @@ import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import dotenv from 'dotenv';
-// import { globby } from 'globby';
 import fetch from 'node-fetch';
 import rehypeInline from 'rehype-inline';
 import rehypeParse from 'rehype-parse';
@@ -15,7 +14,6 @@ const docraptorApiKey = process.env.DOCRAPTOR_API_KEY;
 const docraptorTest = process.env.DOCRAPTOR_TEST;
 const currentDir = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.join(currentDir, 'dist', 'pdf');
-// const pages = await globby('dist/**/*.html');
 
 /**
  * Inline Assets
