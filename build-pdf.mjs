@@ -3,7 +3,7 @@ import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import dotenv from 'dotenv';
-import { globby } from 'globby';
+// import { globby } from 'globby';
 import fetch from 'node-fetch';
 import rehypeInline from 'rehype-inline';
 import rehypeParse from 'rehype-parse';
@@ -15,7 +15,7 @@ const docraptorApiKey = process.env.DOCRAPTOR_API_KEY;
 const docraptorTest = process.env.DOCRAPTOR_TEST;
 const currentDir = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.join(currentDir, 'dist', 'pdf');
-const pages = await globby('dist/**/*.html');
+// const pages = await globby('dist/**/*.html');
 
 /**
  * Inline Assets
@@ -23,41 +23,37 @@ const pages = await globby('dist/**/*.html');
  */
 const inlineAssets = unified()
   .use(rehypeParse, { fragment: false })
-  .use(rehypeInline, {
-    js: true,
-    css: true,
-    images: true,
-    imports: true,
-    svgElements: false,
-  })
+  .use(rehypeInline)
   .use(rehypeStringify);
 
 /**
- * Get an HTML file and prepare it for DocRaptor
+ * Get HTML From File
+ * Gets the contents of an HTML file and prepares it for DocRaptor.
  *
  * @param {string} htmlPath - the HTML file to load
  * @returns {string} the contents of the HTML file with inlined CSS
  */
-const getHTML = async (htmlPath) => {
+const getHtmlFromFile = async (htmlPath) => {
   // Grab the HTML file contents as a string
   const rawHTML = await fs.readFile(htmlPath, 'utf8');
   // Change the CSS URI to a path so it can be inlined
-  const updatedCSS = rawHTML.replace('/style.css', 'dist/style.css');
+  let updatedHTML = rawHTML.replace('/style.css', 'dist/style.css');
   // Change any image URLs to paths so they can be inlined
-  const updatedImages = updatedCSS.replace('/images/', 'dist/images/');
+  updatedHTML = updatedHTML.replaceAll('/images/', 'dist/images/');
   // Inline the CSS
-  return String(await inlineAssets.process(updatedImages));
+  return String(await inlineAssets.process(updatedHTML));
 };
 
 /**
- * Generate a PDF using DocRaptor
+ * Fetch PDF
+ * Generates a PDF file from HTML using DocRaptor.
  *
  * @see https://docraptor.com/documentation/api
  * @param {string} html - passed to docraptor
  * @param {string} slug - used for better error logging only
  * @returns {Buffer}
  */
-const getPDF = async (html, slug) => {
+const fetchPDF = async (html, slug) => {
   if (!docraptorApiKey) throw new Error('Missing DocRaptor API Key');
   // Send HTML to DocRaptor to generate PDF
   const pdfRes = await fetch('https://docraptor.com/docs', {
@@ -85,42 +81,47 @@ const getPDF = async (html, slug) => {
 };
 
 /**
+ * Get Meta Information
+ * Takes an HTML path and returns meta information, including the slug,
+ * HTML path relative to the current working directory, and the PDF path.
+ *
+ * @param {string} htmlPath - the HTML file to load
+ * @returns {object} meta - slug and path info
+ */
+const getMeta = (htmlPath) => {
+  // Strip `dist/` and `/index.html` from htmlPath
+  let slug = htmlPath.slice(5, -11);
+  // Special case for the root HTML file
+  if (htmlPath === 'dist/index.html') slug = 'home';
+  // Create relative HTML path and PDF write destination
+  const htmlPathCWD = path.join(currentDir, htmlPath);
+  const pdfSlug = slug.replace('/', '-');
+  const pdfPath = path.join(distDir, `${pdfSlug}.pdf`);
+  return {
+    slug,
+    htmlPathCWD,
+    pdfSlug,
+    pdfPath,
+  };
+};
+
+/**
  * Create a PDF from an HTML file
  *
  * @param {string} htmlPath - the HTML file to load
  */
 const generatePDF = async (htmlPath) => {
-  // Strip `dist/` and `/index.html` from htmlPath
-  let slug = htmlPath.slice(5, -11);
-  // Special case for the root HTML file
-  if (htmlPath === 'dist/index.html') slug = 'index';
-  // Create relative HTML path and PDF write destination
-  const htmlPathCWD = path.join(currentDir, htmlPath);
-  const pdfSlug = slug.replace('/', '-');
-  const pdfPath = path.join(distDir, `${pdfSlug}.pdf`);
-  // Load the HTML file
-  const html = await getHTML(htmlPathCWD);
+  // Get the slug and path info for this HTML file
+  const meta = getMeta(htmlPath);
+  // Get the contents of the HTML file
+  const html = await getHtmlFromFile(meta.htmlPathCWD);
   // Generate the PDF with DocRaptor
-  const pdf = await getPDF(html, slug);
-  // Save the PDF to a file
-  await fs.writeFile(pdfPath, pdf);
-  console.log(`[PDF] Writing dist/pdf/${pdfSlug}.pdf`);
-};
-
-/**
- * Build All PDFs
- * This script will generate a PDF from every HTML file in the `/dist` folder by
- * passing the HTML to DocRaptor and saving the files to `/dist/pdf`.
- */
-const buildAllPDFs = async () => {
+  const pdf = await fetchPDF(html, meta.slug);
   // Create the output directory if it doesn't exist
   await fs.mkdir(distDir, { recursive: true });
-  // Loop over the list of pages to generate an individual PDF for each page
-  await Promise.all(
-    pages.map(async (page) => {
-      await generatePDF(page);
-    }),
-  );
+  // Save the PDF to a file
+  await fs.writeFile(meta.pdfPath, pdf);
+  console.log(`[PDF] Writing ${meta.pdfPath}`);
 };
 
-buildAllPDFs();
+await generatePDF('dist/a-study-in-scarlet/index.html');

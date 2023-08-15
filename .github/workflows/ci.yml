@@ -25,3 +25,7 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Run linter 👀
         run: yarn lint:check
+      - name: Build CSS 🎨
+        run: yarn build:css
+      - name: Build Content 📝
+        run: yarn build:content
