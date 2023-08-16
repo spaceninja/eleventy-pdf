@@ -1,5 +1,6 @@
 /* this rule doesn't understand some print styles */
 /* stylelint-disable scss/at-rule-no-unknown */
+/* stylelint-disable selector-pseudo-element-no-unknown */
 
 @media print {
   /*
