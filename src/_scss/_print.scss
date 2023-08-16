@@ -1,5 +1,6 @@
 /* this rule doesn't understand some print styles */
 /* stylelint-disable scss/at-rule-no-unknown */
+/* stylelint-disable selector-pseudo-element-no-unknown */
 
 .print-only {
   display: none;
@@ -60,6 +61,27 @@
 
   .chapter-title {
     margin-top: 2in;
+  }
+
+  /*
+    Footnotes
+    1. Position the footnote at the bottom of the page it appears on.
+    2. Docraptor tries to automatically add the footnote numbers, but we
+       also need the numbers for web display, so we're adding them manually,
+       and disabling the automatic ones.
+
+    @see https://docraptor.com/documentation/article/1067570-adding-footnotes
+  */
+  .footnote {
+    float: footnote; // 1
+
+    &::footnote-call {
+      content: none; // 2
+    }
+
+    &::footnote-marker {
+      content: none; // 2
+    }
   }
 
   /*

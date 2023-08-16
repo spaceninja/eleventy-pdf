@@ -67,6 +67,35 @@ p {
   }
 }
 
+/**
+ * Footnotes
+ * 1. For print, we need the footnote to appear inline with the text, so it
+ *    can be positioned at the bottom of the current page. For screen, we
+ *    want to treat footnotes as endnotes, appearing at the end of the chapter.
+ */
+@media screen {
+  main {
+    display: flex; // 1
+    flex-direction: column; // 1
+  }
+
+  .footnote {
+    margin-top: 2em;
+    order: 1; // 1
+  }
+}
+
+.footnote {
+  font-style: italic;
+  font-size: smaller;
+}
+
+sup {
+  vertical-align: baseline;
+  position: relative;
+  bottom: 0.5em;
+}
+
 .credits {
   margin: 1em 0;
   text-align: center;
