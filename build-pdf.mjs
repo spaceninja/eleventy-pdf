@@ -26,7 +26,8 @@ const inlineAssets = unified()
 
 /**
  * Get HTML From File
- * Gets the contents of an HTML file and prepares it for DocRaptor.
+ * Gets the contents of an HTML file and prepares it for PDF generation
+ * by inlining assets like CSS and images.
  *
  * @param {string} htmlPath - the HTML file to load
  * @returns {string} the contents of the HTML file with inlined CSS
@@ -38,13 +39,13 @@ const getHtmlFromFile = async (htmlPath) => {
   let updatedHTML = rawHTML.replace('/style.css', 'dist/style.css');
   // Change any image URLs to paths so they can be inlined
   updatedHTML = updatedHTML.replaceAll('/images/', 'dist/images/');
-  // Inline the CSS
+  // Inline the assets
   return String(await inlineAssets.process(updatedHTML));
 };
 
 /**
  * Fetch PDF
- * Generates a PDF file from HTML using DocRaptor.
+ * Creates a PDF file from HTML using DocRaptor.
  *
  * @see https://docraptor.com/documentation/api
  * @param {string} html - passed to docraptor
@@ -93,7 +94,9 @@ const getMeta = (htmlPath) => {
   if (htmlPath === 'dist/index.html') slug = 'home';
   // Create relative HTML path and PDF write destination
   const htmlPathCWD = path.join(currentDir, htmlPath);
+  // Convert any slashes to dashes for the PDF filename
   const pdfSlug = slug.replace('/', '-');
+  // Create the PDF write destination
   const pdfPath = path.join(distDir, `${pdfSlug}.pdf`);
   return {
     slug,
@@ -113,7 +116,7 @@ const generatePDF = async (htmlPath) => {
   const meta = getMeta(htmlPath);
   // Get the contents of the HTML file
   const html = await getHtmlFromFile(meta.htmlPathCWD);
-  // Generate the PDF with DocRaptor
+  // Create a PDF from the HTML contents
   const pdf = await fetchPDF(html, meta.slug);
   // Create the output directory if it doesn't exist
   await fs.mkdir(distDir, { recursive: true });
