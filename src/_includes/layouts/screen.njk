@@ -4,7 +4,7 @@ layout: layouts/base.njk
 
 <header class="header" id="top">
   <div class="header-content">
-    <a href="/">A Study in Scarlet</a>
+    <a href="/">{{ book.title }}</a>
   </div>
 </header>
 <main class="primary-content {{ main_class }}">
@@ -37,7 +37,7 @@ layout: layouts/base.njk
   {% endif %}
   <div class="footer-content">
     <div class="footer-copyright">
-      <p><i>A Study in Scarlet</i> was originally published in 1886 and is now in the public domain.</p>
+      <p><i>{{ book.title }}</i> was originally published in 1886 and is now in the public domain.</p>
     </div>
   </div>
 </footer>

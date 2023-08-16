@@ -8,7 +8,6 @@
 		belong in the pattern library.
 	*/
   .print-page {
-    background: pink;
     page-break-before: always;
   }
 
@@ -20,12 +19,18 @@
 
   /* add page numbers to footer, aligned to match source pdf */
   @page {
+    @top {
+      content: 'A Study in Scarlet';
+      font-family: Merriweather, serif;
+      font-size: smaller;
+      font-style: italic;
+      margin-top: 1em;
+    }
     @bottom {
       content: counter(page);
-      font-family: 'Noto Sans', sans-serif;
-      margin-top: -1em; /* pull page numbers into page */
-      text-align: right;
-      vertical-align: top;
+      font-family: Merriweather, serif;
+      font-size: smaller;
+      margin-bottom: 1em;
     }
   }
 

@@ -4,20 +4,19 @@
 {% set title = title or chapterObject.data.title %}
 
 {% if showPartTitle %}
-  <header class="part-header">
-    <h2
-      id="pt-{{ currentPart}}"
-      >
-      Part {{ currentPart }}.
-    </h2>
-    <p><em>{{ parts[currentPart].title | safe }}</em></p>
-  </header>
+  <h2
+    class="part-title"
+    id="pt-{{ currentPart}}"
+    >
+    <strong>Part {{ currentPart }}.</strong>
+    <span>{{ parts[currentPart].title | safe }}</span>
+  </h2>
 {% endif %}
 
 <h3
   class="chapter-title"
   id="ch-{{ chapter }}-{{ title | slugify }}"
   >
-  <strong>Chapter {{ chapter }}:</strong>
-  {{ title }}
+  <strong>Chapter {{ chapter }}.</strong>
+  <span>{{ title }}</span>
 </h3>

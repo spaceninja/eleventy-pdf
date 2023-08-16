@@ -17,6 +17,7 @@
 html {
   box-sizing: border-box;
   color-scheme: light dark;
+  font-size: 18px;
 }
 
 *,
@@ -29,7 +30,6 @@ body {
   background: var(--color-bg);
   color: var(--color-fg);
   font-family: Merriweather, serif;
-  font-size: 18px;
   line-height: 1.75;
   margin: 1em;
 }
@@ -52,6 +52,10 @@ h1 {
   text-align: center;
 }
 
+h3 {
+  font-size: 1.3em;
+}
+
 h1,
 h2,
 h3 {
@@ -59,7 +63,7 @@ h3 {
 }
 
 p {
-  margin: 0.25em 0;
+  margin: 0 0 0.25em;
   text-indent: 2em;
 
   &:first-of-type {
@@ -102,14 +106,18 @@ sup {
   text-indent: 0;
 }
 
-.part-header {
+.part-title {
   text-align: center;
 
-  h2 {
-    margin-bottom: 0;
+  strong {
+    display: block;
   }
 
-  p {
+  span {
+    display: block;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: normal;
     text-wrap: balance;
   }
 }
@@ -146,6 +154,14 @@ figcaption {
   text-wrap: balance;
 }
 
+figure {
+  margin: 1em 0;
+
+  ol {
+    margin-top: 0;
+  }
+}
+
 .is-centered {
   text-align: center;
 }
@@ -170,6 +186,14 @@ figcaption {
 
   strong {
     display: block;
+  }
+
+  span {
+    display: block;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: normal;
+    text-wrap: balance;
   }
 }
 
