@@ -84,6 +84,20 @@
     }
   }
 
+  .toc-item {
+    align-items: flex-end;
+    display: flex;
+  }
+
+  .toc-title {
+    flex: 1;
+  }
+
+  .toc-page {
+    padding-left: 0.5em;
+    text-align: right;
+  }
+
   /*
 		Fix Dot Leaders
 		Our dot leader pattern is broken in the generated PDF.
@@ -96,15 +110,11 @@
 		@see https://www.w3.org/Style/Examples/007/leaders.en.html
 	*/
   @supports (content: leader(dotted)) {
-    .DotLeader {
+    .toc-item {
       break-inside: avoid;
     }
 
-    .DotLeader-between {
-      display: none;
-    }
-
-    .DotLeader-start::after {
+    .toc-title::after {
       content: leader(dotted);
     }
   }
@@ -136,7 +146,7 @@
 		@see https://docraptor.com/documentation/tutorial/table-of-contents
 	*/
   /* stylelint-disable-next-line no-descending-specificity */
-  nav .DotLeader-end a::after {
+  .toc-page a::after {
     content: target-counter(attr(href), page);
   }
 }

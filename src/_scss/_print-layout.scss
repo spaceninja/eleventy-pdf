@@ -35,12 +35,12 @@
   }
 
   /* named pages */
-  .page-front-cover {
-    page: front_cover;
+  .title-page {
+    page: title_page;
   }
 
-  .page-back-cover {
-    page: back_cover;
+  .page-frontispiece {
+    page: frontispiece;
   }
 
   .page-toc {
@@ -50,19 +50,28 @@
   /* set TOC to page 0, so successive page numbers are correct */
   @page toc {
     counter-reset: page -1;
+    @top {
+      content: none;
+    }
     @bottom {
       content: none;
     }
   }
 
   /* remove page numbers */
-  @page front_cover {
+  @page title_page {
+    @top {
+      content: none;
+    }
     @bottom {
       content: none;
     }
   }
 
-  @page back_cover {
+  @page frontispiece {
+    @top {
+      content: none;
+    }
     @bottom {
       content: none;
     }
