@@ -28,9 +28,9 @@
   }
 
   .full-page-image {
+    page-break-after: always;
     page-break-before: always;
     page-break-inside: avoid;
-    page-break-after: always;
 
     figcaption {
       font-size: smaller;
@@ -115,7 +115,7 @@
 
   .u-print-linkUrls :link,
   .u-print-linkUrls :visited {
-    color: currentColor;
+    color: currentcolor;
   }
 
   /**

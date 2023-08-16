@@ -86,14 +86,14 @@ p {
 }
 
 .footnote {
-  font-style: italic;
   font-size: smaller;
+  font-style: italic;
 }
 
 sup {
-  vertical-align: baseline;
-  position: relative;
   bottom: 0.5em;
+  position: relative;
+  vertical-align: baseline;
 }
 
 .credits {
