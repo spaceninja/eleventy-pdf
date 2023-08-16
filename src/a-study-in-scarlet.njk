@@ -10,31 +10,11 @@ eleventyComputed:
 #}
 {% include 'title-page.njk' %}
 {% include 'frontispiece.njk' %}
-<article>
-  <nav>
-    <h2 id="contents">Contents</h2>
-    <ul>
-      {% for chapter in collections.chapters %}
-        <li>
-          <span>
-            <a href="#{{ chapter.page.url }}">
-              {{ chapter.data.title }}
-            </a>
-          </span>
-          -
-          <span>
-            <a href="#{{ chapter.page.url }}">
-              <span class="u-hiddenVisually">Page </span>
-            </a>
-          </span>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
-</article>
+{% include 'contents.njk' %}
+
 {% for chapterObject in collections.chapters %}
-<article>
-  {% include 'chapter-header.njk' %}
-  {{ chapterObject.content | safe }}
-</article>
+  <article class="print-page">
+    {% include 'chapter-header.njk' %}
+    {{ chapterObject.content | safe }}
+  </article>
 {% endfor %}

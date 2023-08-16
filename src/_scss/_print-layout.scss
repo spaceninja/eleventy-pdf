@@ -1,0 +1,65 @@
+/* this rule doesn't understand some print styles */
+/* stylelint-disable scss/at-rule-no-unknown */
+
+@media print {
+  /*
+		This is to ensure that each "page" in the CMS breaks to a new page in
+		the PDF. What markup element it targets may need to change and it may
+		belong in the pattern library.
+	*/
+  .print-page {
+    background: pink;
+    page-break-before: always;
+  }
+
+  /* reduce default margins to more closely match source pdf */
+  @page {
+    margin: 0.75in;
+    padding: 0;
+  }
+
+  /* add page numbers to footer, aligned to match source pdf */
+  @page {
+    @bottom {
+      content: counter(page);
+      font-family: 'Noto Sans', sans-serif;
+      margin-top: -1em; /* pull page numbers into page */
+      text-align: right;
+      vertical-align: top;
+    }
+  }
+
+  /* named pages */
+  .page-front-cover {
+    page: front_cover;
+  }
+
+  .page-back-cover {
+    page: back_cover;
+  }
+
+  .page-toc {
+    page: toc;
+  }
+
+  /* set TOC to page 0, so successive page numbers are correct */
+  @page toc {
+    counter-reset: page -1;
+    @bottom {
+      content: none;
+    }
+  }
+
+  /* remove page numbers */
+  @page front_cover {
+    @bottom {
+      content: none;
+    }
+  }
+
+  @page back_cover {
+    @bottom {
+      content: none;
+    }
+  }
+}

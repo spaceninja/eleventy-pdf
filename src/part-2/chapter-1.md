@@ -112,7 +112,15 @@ They were about to resume their journey when one of the youngest and keenest-eye
 
 On the little plateau which crowned the barren hill there stood a single giant boulder, and against this boulder there lay a tall man, long-bearded and hard-featured, but of an excessive thinness. His placid face and regular breathing showed that he was fast asleep. Beside him lay a little child, with her round white arms encircling his brown sinewy neck, and her golden haired head resting upon the breast of his velveteen tunic. Her rosy lips were parted, showing the regular line of snow-white teeth within, and a playful smile played over her infantile features. Her plump little white legs terminating in white socks and neat shoes with shining buckles, offered a strange contrast to the long shrivelled members of her companion. On the ledge of rock above this strange couple there stood three solemn buzzards, who, at the sight of the new comers uttered raucous screams of disappointment and flapped sullenly away.
 
-<figure>
+The cries of the foul birds awoke the two sleepers who stared about them in bewilderment. The man staggered to his feet and looked down upon the plain which had been so desolate when sleep had overtaken him, and which was now traversed by this enormous body of men and of beasts. His face assumed an expression of incredulity as he gazed, and he passed his boney hand over his eyes. “This is what they call delirium, I guess,” he muttered. The child stood beside him, holding on to the skirt of his coat, and said nothing but looked all round her with the wondering questioning gaze of childhood.
+
+The rescuing party were speedily able to convince the two castaways that their appearance was no delusion. One of them seized the little girl, and hoisted her upon his shoulder, while two others supported her gaunt companion, and assisted him towards the waggons.
+
+“My name is John Ferrier,” the wanderer explained; “me and that little un are all that’s left o’ twenty-one people. The rest is all dead o’ thirst and hunger away down in the south.”
+
+“Is she your child?” asked someone.
+
+<figure class="full-page-image">
   <img
     src="/images/p56.png"
     alt="Illustration of two men helping a thin man with a long beard, while a third man lifts a small child onto his shoulder."
@@ -123,14 +131,6 @@ On the little plateau which crowned the barren hill there stood a single giant b
     <p>“One of them seized the little girl, and hoisted her upon his shoulder.”</p>
   </figcaption>
 </figure>
-
-The cries of the foul birds awoke the two sleepers who stared about them in bewilderment. The man staggered to his feet and looked down upon the plain which had been so desolate when sleep had overtaken him, and which was now traversed by this enormous body of men and of beasts. His face assumed an expression of incredulity as he gazed, and he passed his boney hand over his eyes. “This is what they call delirium, I guess,” he muttered. The child stood beside him, holding on to the skirt of his coat, and said nothing but looked all round her with the wondering questioning gaze of childhood.
-
-The rescuing party were speedily able to convince the two castaways that their appearance was no delusion. One of them seized the little girl, and hoisted her upon his shoulder, while two others supported her gaunt companion, and assisted him towards the waggons.
-
-“My name is John Ferrier,” the wanderer explained; “me and that little un are all that’s left o’ twenty-one people. The rest is all dead o’ thirst and hunger away down in the south.”
-
-“Is she your child?” asked someone.
 
 “I guess she is now,” the other cried, defiantly; “she’s mine ‘cause I saved her. No man will take her from me. She’s Lucy Ferrier from this day on. Who are you, though?” he continued, glancing with curiosity at his stalwart, sunburned rescuers; “there seems to be a powerful lot of ye.”
 

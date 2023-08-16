@@ -1,6 +1,120 @@
+/* this rule doesn't understand some print styles */
+/* stylelint-disable scss/at-rule-no-unknown */
+
 .print-only {
   display: none;
+
   @media print {
     display: block;
+  }
+}
+
+.print-only-inline {
+  display: none;
+
+  @media print {
+    display: inline;
+  }
+}
+
+@media print {
+  body {
+    font-size: 16px;
+  }
+
+  figure {
+    page-break-inside: avoid;
+  }
+
+  .full-page-image {
+    page-break-before: always;
+    page-break-inside: avoid;
+    page-break-after: always;
+
+    figcaption {
+      font-size: smaller;
+      margin-top: 1em;
+    }
+
+    img {
+      margin: 0 auto;
+      max-height: 800px;
+      page-break-inside: avoid;
+      width: auto;
+    }
+  }
+
+  p {
+    orphans: 2;
+    widows: 2;
+  }
+
+  .title-page {
+    margin-top: 4in;
+  }
+
+  .part-header {
+    margin: 4in auto 0;
+    page-break-after: always;
+  }
+
+  .chapter-title {
+    margin-top: 2in;
+  }
+
+  /*
+		Fix Dot Leaders
+		Our dot leader pattern is broken in the generated PDF.
+		It's unclear why, since DocRaptor uses Prince, and Prince supports
+		the Flexbox fallback, but it also turns out Prince supports the
+		proposed `leader()` syntax to do the same thing, so we can just
+		swap our approach here.
+
+		@see https://www.princexml.com/doc/gen-content/
+		@see https://www.w3.org/Style/Examples/007/leaders.en.html
+	*/
+  @supports (content: leader(dotted)) {
+    .DotLeader {
+      break-inside: avoid;
+    }
+
+    .DotLeader-between {
+      display: none;
+    }
+
+    .DotLeader-start::after {
+      content: leader(dotted);
+    }
+  }
+
+  /**
+   * Default back to the text color when printed
+   */
+
+  .u-print-linkUrls :link,
+  .u-print-linkUrls :visited {
+    color: currentColor;
+  }
+
+  /**
+   * Link URLs should be visible when printed
+   */
+
+  /* stylelint-disable-next-line plugin/selector-bem-pattern */
+  .u-print-linkUrls a:not([href^='tel:'])::after {
+    content: ' (' attr(href) ') ';
+  }
+
+  /*
+		Page Numbers
+		We're using some special DocRaptor CSS to inject page numbers to
+		the table of contents and the page footer:
+		@see https://docraptor.com/documentation/article/1067094-headers-footers-for-pdfs
+		@see https://docraptor.com/documentation/article/1082618-page-numbers
+		@see https://docraptor.com/documentation/tutorial/table-of-contents
+	*/
+  /* stylelint-disable-next-line no-descending-specificity */
+  nav .DotLeader-end a::after {
+    content: target-counter(attr(href), page);
   }
 }

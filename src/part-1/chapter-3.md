@@ -117,18 +117,6 @@ Sherlock Holmes approached the body, and, kneeling down, examined it intently. �
 
 “Positive!” cried both detectives.
 
-<figure>
-  <img
-    src="/images/p20.png"
-    alt="Illustration of Sherlock Holmes leaning over and examining a dead body."
-    width="851"
-    height="1253"
-  >
-  <figcaption>
-    <p>“As he spoke, his nimble fingers were flying here, there, and everywhere.”</p>
-  </figcaption>
-</figure>
-
 “Then, of course, this blood belongs to a second individual—presumably the murderer, if murder has been committed. It reminds me of the circumstances attendant on the death of Van Jansen, in Utrecht, in the year ‘34. Do you remember the case, Gregson?”
 
 “No, sir.”
@@ -146,6 +134,18 @@ As he spoke, his nimble fingers were flying here, there, and everywhere, feeling
 Gregson had a stretcher and four men at hand. At his call they entered the room, and the stranger was lifted and carried out. As they raised him, a ring tinkled down and rolled across the floor. Lestrade grabbed it up and stared at it with mystified eyes.
 
 “There’s been a woman here,” he cried. “It’s a woman’s wedding-ring.”
+
+<figure class="full-page-image">
+  <img
+    src="/images/p20.png"
+    alt="Illustration of Sherlock Holmes leaning over and examining a dead body."
+    width="851"
+    height="1253"
+  >
+  <figcaption>
+    <p>“As he spoke, his nimble fingers were flying here, there, and everywhere.”</p>
+  </figcaption>
+</figure>
 
 He held it out, as he spoke, upon the palm of his hand. We all gathered round him and gazed at it. There could be no doubt that that circlet of plain gold had once adorned the finger of a bride.
 

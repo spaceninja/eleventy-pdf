@@ -10,9 +10,8 @@
       >
       Part {{ currentPart }}.
     </h2>
-    <p><em>{{ parts[currentPart].title }}</em></p>
+    <p><em>{{ parts[currentPart].title | safe }}</em></p>
   </header>
-  <hr>
 {% endif %}
 
 <h3

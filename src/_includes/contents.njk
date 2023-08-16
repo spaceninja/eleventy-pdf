@@ -1,12 +1,10 @@
-<article>
+<article class="print-page">
   <h2 id="contents">Contents</h2>
 
   <section>
     <header class="toc-header">
       <h3>Part I.</h3>
-      <p>
-        <i>{{ parts['I'].title }}</i>
-      </p>
+      <p><em>{{ parts['I'].title | safe }}</em></p>
     </header>
     <ol type="I">
       {% for chapter in collections.partOne %}
@@ -29,9 +27,7 @@
   <section>
     <header class="toc-header">
       <h3>Part II.</h3>
-      <p>
-        <i>{{ parts['I'].title }}</i>
-      </p>
+      <p><em>{{ parts['II'].title | safe }}</em></p>
     </header>
     <ol type="I">
       {% for chapter in collections.partTwo %}

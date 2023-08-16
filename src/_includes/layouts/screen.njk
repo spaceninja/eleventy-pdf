@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+---
+
+<header class="header" id="top">
+  <div class="header-content">
+    <a href="/">A Study in Scarlet</a>
+  </div>
+</header>
+<main class="primary-content {{ main_class }}">
+  {{ content | safe }}
+</main>
+<footer class="footer">
+  {% if showNav %}
+  <nav class="chapter-nav">
+    <div class="chapter-nav__item chapter-nav__prev{% if not prev %} is-disabled{% endif %}">
+      {% if prev %}
+        <a class="chapter-nav__link" href="../{{ prev }}">Previous Chapter</a>
+      {% else %}
+        Previous Chapter
+      {% endif %}
+    </div>
+    <div class="chapter-nav__item chapter-nav__toc">
+      <a class="chapter-nav__link" href="/">Table of Contents</a>
+    </div>
+    <div class="chapter-nav__item chapter-nav__next{% if not next %} is-disabled{% endif %}">
+      {% if next %}
+        <a class="chapter-nav__link" href="../{{ next }}">Next Chapter</a>
+      {% else %}
+        Next Chapter
+      {% endif %}
+    </div>
+  </nav>
+  <div class="nav-back-to-top">
+    <a class="nav-back-to-top__link" href="#top"><span class="sr-only">Back to Top</span></a>
+  </div>
+  {% endif %}
+  <div class="footer-content">
+    <div class="footer-copyright">
+      <p><i>A Study in Scarlet</i> was originally published in 1886 and is now in the public domain.</p>
+    </div>
+  </div>
+</footer>

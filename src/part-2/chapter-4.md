@@ -73,7 +73,9 @@ What was that? In the silence he heard a gentle scratching sound—low, but very
 
 Outside all was calm and quiet. The night was fine, and the stars were twinkling brightly overhead. The little front garden lay before the farmer’s eyes bounded by the fence and gate, but neither there nor on the road was any human being to be seen. With a sigh of relief, Ferrier looked to right and to left, until happening to glance straight down at his own feet he saw to his astonishment a man lying flat upon his face upon the ground, with arms and legs all asprawl.
 
-<figure>
+So unnerved was he at the sight that he leaned up against the wall with his hand to his throat to stifle his inclination to call out. His first thought was that the prostrate figure was that of some wounded or dying man, but as he watched it he saw it writhe along the ground and into the hall with the rapidity and noiselessness of a serpent. Once within the house the man sprang to his feet, closed the door, and revealed to the astonished farmer the fierce face and resolute expression of Jefferson Hope.
+
+<figure class="full-page-image">
   <img
     src="/images/p72.png"
     alt="Illustration of John Ferrier surprised by a man lying flat upon on the ground."
@@ -84,8 +86,6 @@ Outside all was calm and quiet. The night was fine, and the stars were twinkling
     <p>“As he watched it he saw it writhe along the ground.”</p>
   </figcaption>
 </figure>
-
-So unnerved was he at the sight that he leaned up against the wall with his hand to his throat to stifle his inclination to call out. His first thought was that the prostrate figure was that of some wounded or dying man, but as he watched it he saw it writhe along the ground and into the hall with the rapidity and noiselessness of a serpent. Once within the house the man sprang to his feet, closed the door, and revealed to the astonished farmer the fierce face and resolute expression of Jefferson Hope.
 
 “Good God!” gasped John Ferrier. “How you scared me! Whatever made you come in like that.”
 
