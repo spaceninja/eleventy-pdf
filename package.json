@@ -37,6 +37,6 @@
     "stylelint": "15.10.2",
     "stylelint-config-prettier": "9.0.5",
     "stylelint-config-spaceninja": "13.0.1",
-    "unified": "10.1.2"
+    "unified": "11.0.1"
   }
 }
