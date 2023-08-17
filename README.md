@@ -11,3 +11,5 @@ In addition, it will output a single-page version of the entire book. This HTML 
 We then have a node script that will load the contents of the single-page version, inline all the CSS and images, and then submit the resulting HTML to the DocRaptor API, which returns a PDF that we save to the `dist` directory.
 
 For more information, check out [`build-pdf.mjs`](build-pdf.mjs) and this blog post (coming soon).
+
+You can also view the [demo site](https://eleventy-pdf.netlify.app/) and the [demo pdf](https://eleventy-pdf.netlify.app/pdf/a-study-in-scarlet.pdf).
