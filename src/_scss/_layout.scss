@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 1em;
+}
+
+main {
+  margin: 0 auto;
+  margin-bottom: 2em;
+  max-width: 60ch;
+}
+
+.app-header {
+  text-align: center;
+}
+
+.app-footer {
+  border-top: 1px solid currentcolor;
+  padding-top: 1em;
+}
+
+/**
+ * Chapter Navigation
+ */
+.chapter-nav {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.chapter-nav__toc {
+  text-align: center;
+}
+
+.chapter-nav__next {
+  text-align: right;
+}

@@ -1,0 +1,74 @@
+@import 'https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap';
+
+html {
+  font-size: 18px;
+
+  @media print {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: Merriweather, serif;
+  line-height: 1.75;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  margin: 0 0 0.25em;
+  text-indent: 2em;
+
+  &:first-of-type {
+    text-indent: 0;
+  }
+
+  @media print {
+    orphans: 2;
+    widows: 2;
+  }
+}
+
+// Utility class to reset a paragraph to default styles
+.p-initial {
+  margin: 1em 0;
+  text-indent: 0;
+}
+
+em,
+i {
+  em,
+  i {
+    font-style: normal;
+  }
+}
+
+// Keep superscripts from leaving a gap in the text
+sup {
+  bottom: 0.5em;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.is-centered {
+  text-align: center;
+}
+
+.footer-copyright {
+  font-size: smaller;
+  text-align: center;
+}

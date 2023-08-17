@@ -3,16 +3,14 @@ layout: layouts/base.njk
 ---
 
 {% if showHeader %}
-<header class="header" id="top">
-  <div class="header-content">
-    <em><a href="/">{{ book.title }}</a></em>
-  </div>
+<header class="app-header" id="top">
+  <p><em><a href="/">{{ book.title }}</a></em></p>
 </header>
 {% endif %}
-<main class="primary-content {{ main_class }}">
+<main class="app-main {{ main_class }}">
   {{ content | safe }}
 </main>
-<footer class="footer">
+<footer class="app-footer">
   {% if showNav %}
   <nav class="chapter-nav">
     <div class="chapter-nav__item chapter-nav__prev{% if not prev %} is-disabled{% endif %}">
@@ -33,9 +31,6 @@ layout: layouts/base.njk
       {% endif %}
     </div>
   </nav>
-  <div class="nav-back-to-top">
-    <a class="nav-back-to-top__link" href="#top"><span class="sr-only">Back to Top</span></a>
-  </div>
   {% endif %}
   <div class="footer-content">
     <div class="footer-copyright">

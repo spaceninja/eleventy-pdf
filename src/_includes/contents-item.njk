@@ -1,6 +1,6 @@
 <li>
   <span class="toc-item">
-    <span class="toc-title">
+    <span class="toc-item__title">
       <a href="
         {%- if useJumpLinks -%}
           #ch-{{ chapter.data.chapter }}-{{ chapter.data.title | slugify }}
@@ -10,7 +10,7 @@
         {{- chapter.data.title -}}
       </a>
     </span>
-    <span class="toc-page print-only">
+    <span class="toc-item__page print-only">
       <a href="
         {%- if useJumpLinks -%}
           #ch-{{ chapter.data.chapter }}-{{ chapter.data.title | slugify }}

@@ -14,7 +14,7 @@ eleventyComputed:
 {% include 'contents.njk' %}
 
 {% for chapterObject in collections.chapters %}
-  <article class="print-page">
+  <article class="new-page">
     {% include 'chapter-header.njk' %}
     {{ chapterObject.content | safe }}
   </article>

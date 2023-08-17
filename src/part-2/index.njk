@@ -1,25 +1,21 @@
 ---
 layout: layouts/screen.njk
+showHeader: true
 eleventyComputed:
   title: 'Part {{ currentPart }}'
 ---
 
-<h2>Contents</h2>
-
-<section>
-  <header class="toc-header">
-    <h3>Part {{ currentPart }}.</h3>
-    <p>
-      <i>{{ parts[currentPart].title }}</i>
-    </p>
-  </header>
-  <ol type="I">
-    {% for chapter in collections.partTwo %}
-      <li>
-        <a href="{{ chapter.page.url }}">
-          {{ chapter.data.title }}
-        </a>
-      </li>
-    {% endfor %}
-  </ol>
-</section>
+<article>
+  <h2>Contents</h2>
+  <section>
+    <header class="toc-header">
+      <h3>Part II.</h3>
+      <p><em>{{ parts['II'].title | safe }}</em></p>
+    </header>
+    <ol type="I">
+      {% for chapter in collections.partTwo %}
+        {% include 'contents-item.njk' %}
+      {% endfor %}
+    </ol>
+  </section>
+</article>

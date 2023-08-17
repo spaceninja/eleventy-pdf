@@ -1,0 +1,41 @@
+/**
+ * Title Page
+ */
+.title-page {
+  @media print {
+    margin-top: 3.5in;
+  }
+}
+
+/**
+ * Part & Chapter Titles
+ */
+.part-title,
+.chapter-title {
+  text-align: center;
+
+  strong {
+    display: block;
+  }
+
+  span {
+    display: block;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: normal;
+    text-wrap: balance;
+  }
+}
+
+.part-title {
+  @media print {
+    margin-top: 3.5in;
+    page-break-after: always;
+  }
+}
+
+.chapter-title {
+  @media print {
+    margin-top: 2in;
+  }
+}

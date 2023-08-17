@@ -1,25 +1,22 @@
-/* this rule doesn't understand some print styles */
-/* stylelint-disable scss/at-rule-no-unknown */
-/* stylelint-disable selector-pseudo-element-no-unknown */
-
 @media print {
-  /*
-		This is to ensure that each "page" in the CMS breaks to a new page in
-		the PDF. What markup element it targets may need to change and it may
-		belong in the pattern library.
-	*/
-  .print-page {
+  // Utility class to force a page break
+  .new-page {
     page-break-before: always;
   }
 
-  /* reduce default margins to more closely match source pdf */
+  /**
+   * Standard Page Layout
+   *
+   * 1. We're using some special DocRaptor CSS to inject page numbers
+   *
+   * @see https://docraptor.com/documentation/article/1067094-headers-footers-for-pdfs
+   * @see https://docraptor.com/documentation/article/1082618-page-numbers
+   */
   @page {
     margin: 0.75in;
     padding: 0;
-  }
 
-  /* add page numbers to footer, aligned to match source pdf */
-  @page {
+    // Add book title to page header
     @top {
       content: 'A Study in Scarlet';
       font-family: Merriweather, serif;
@@ -27,15 +24,26 @@
       font-style: italic;
       margin-top: 1em;
     }
+
+    // Add page numbers to page footer
     @bottom {
-      content: counter(page);
+      content: counter(page); // 1
       font-family: Merriweather, serif;
       font-size: smaller;
       margin-bottom: 1em;
     }
   }
 
-  /* named pages */
+  /**
+   * Named Pages with Modified Layouts
+   *
+   * 1. Set table of contents to page 0, so successive page numbers are correct
+   * 2. Remove page header and footer
+   */
+  .page-toc {
+    page: toc;
+  }
+
   .title-page {
     page: title_page;
   }
@@ -44,37 +52,50 @@
     page: frontispiece;
   }
 
-  .page-toc {
-    page: toc;
-  }
-
-  /* set TOC to page 0, so successive page numbers are correct */
   @page toc {
-    counter-reset: page -1;
+    counter-reset: page -1; // 1
     @top {
-      content: none;
+      content: none; // 2
     }
     @bottom {
-      content: none;
+      content: none; // 2
     }
   }
 
-  /* remove page numbers */
   @page title_page {
     @top {
-      content: none;
+      content: none; // 2
     }
     @bottom {
-      content: none;
+      content: none; // 2
     }
   }
 
   @page frontispiece {
     @top {
-      content: none;
+      content: none; // 2
     }
     @bottom {
-      content: none;
+      content: none; // 2
     }
+  }
+}
+
+/**
+ * Utility classes to hide elements from the screen, but show them when printed
+ */
+.print-only {
+  display: none;
+
+  @media print {
+    display: block;
+  }
+}
+
+.print-only-inline {
+  display: none;
+
+  @media print {
+    display: inline;
   }
 }

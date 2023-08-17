@@ -1,0 +1,68 @@
+/**
+ * Table of Contents
+ */
+.toc-header {
+  text-align: left;
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  p {
+    text-wrap: balance;
+  }
+}
+
+/**
+ * Table of Contents Items
+ *
+ * 1. For print only, we use flexbox to control the layout between the chapter
+ *    title and page number.
+ * 2. If one of the chapter titles needs to wrap, ensure they stay aligned with
+ *    the page number and dot leader.
+ */
+.toc-item {
+  @media print {
+    align-items: flex-end; // 2
+    display: flex; // 1
+    page-break-inside: avoid;
+  }
+}
+
+/**
+ * Chapter Titles
+ *
+ * 1. DocRaptor supports the proposed `leader()` syntax to add dot leaders
+ *    between the chapter title and page number.
+ *
+ * @see https://www.princexml.com/doc/gen-content/
+ * @see https://www.w3.org/Style/Examples/007/leaders.en.html
+ */
+.toc-item__title {
+  @media print {
+    flex: 1;
+
+    &::after {
+      content: leader(dotted); // 1
+    }
+  }
+}
+
+/**
+ * Page Numbers
+ *
+ * 1. We're using some special DocRaptor CSS to inject page numbers
+ *
+ * @see https://docraptor.com/documentation/article/1082618-page-numbers
+ * @see https://docraptor.com/documentation/tutorial/table-of-contents
+ */
+.toc-item__page {
+  @media print {
+    padding-left: 0.5em;
+    text-align: right;
+
+    a::after {
+      content: target-counter(attr(href), page); // 1
+    }
+  }
+}

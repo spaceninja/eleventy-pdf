@@ -1,0 +1,41 @@
+/**
+ * Footnotes
+ *
+ * 1. For print, we need the footnote to appear inline with the text, so it
+ *    can be positioned at the bottom of the current page. For screen, we
+ *    want to treat footnotes as endnotes, appearing at the end of the chapter.
+ * 2. Position the footnote at the bottom of the page it appears on.
+ * 3. Docraptor tries to automatically add the footnote numbers, but we
+ *    also need the numbers for web display, so we're adding them manually,
+ *    and disabling the automatic ones.
+ *
+ * @see https://docraptor.com/documentation/article/1067570-adding-footnotes
+ */
+main {
+  @media screen {
+    display: flex; // 1
+    flex-direction: column; // 1
+  }
+}
+
+.footnote {
+  font-size: smaller;
+  font-style: italic;
+
+  @media screen {
+    margin-top: 2em;
+    order: 1; // 1
+  }
+
+  @media print {
+    float: footnote; // 2
+
+    &::footnote-call {
+      content: none; // 3
+    }
+
+    &::footnote-marker {
+      content: none; // 3
+    }
+  }
+}

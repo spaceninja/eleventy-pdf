@@ -1,0 +1,51 @@
+/**
+ * Figures
+ */
+figure {
+  margin: 1em 0;
+
+  ol {
+    margin-top: 0;
+  }
+
+  @media print {
+    page-break-inside: avoid;
+  }
+}
+
+figcaption {
+  font-style: italic;
+  text-align: center;
+  text-wrap: balance;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/**
+ * Modifier for figures containing full-page images
+ *
+ * 1. 75% of page height
+ */
+.full-page-image {
+  figcaption {
+    font-size: smaller;
+    margin-top: 1em;
+  }
+
+  @media print {
+    page-break-after: always;
+    page-break-before: always;
+    page-break-inside: avoid;
+
+    img {
+      margin: 0 auto;
+      max-height: 8.333in; // 1
+      page-break-inside: avoid;
+      width: auto;
+    }
+  }
+}
