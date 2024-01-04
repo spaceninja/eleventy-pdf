@@ -54,9 +54,11 @@
 
   @page toc {
     counter-reset: page -1; // 1
+
     @top {
       content: none; // 2
     }
+
     @bottom {
       content: none; // 2
     }
@@ -66,6 +68,7 @@
     @top {
       content: none; // 2
     }
+
     @bottom {
       content: none; // 2
     }
@@ -75,6 +78,7 @@
     @top {
       content: none; // 2
     }
+
     @bottom {
       content: none; // 2
     }

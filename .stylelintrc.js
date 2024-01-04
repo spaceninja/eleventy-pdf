@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['stylelint-config-spaceninja', 'stylelint-config-prettier'],
+  extends: ['stylelint-config-spaceninja'],
   // 1. This rule doesn't understand some print styles.
   rules: {
     'scss/at-rule-no-unknown': null, // 1
