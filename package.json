@@ -36,6 +36,6 @@
     "sass": "1.77.6",
     "stylelint": "16.6.1",
     "stylelint-config-spaceninja": "15.0.0",
-    "unified": "11.0.4"
+    "unified": "11.0.5"
   }
 }
