@@ -6,7 +6,9 @@ export default [
   js.configs.recommended,
   eslintConfigPrettier,
   {
-    ignores: ['dist'],
+    ignores: ['dist/**/*'],
+  },
+  {
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
