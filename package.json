@@ -23,7 +23,7 @@
     "lint:prettier:check": "prettier . --check"
   },
   "devDependencies": {
-    "@11ty/eleventy": "2.0.1",
+    "@11ty/eleventy": "3.0.0",
     "dotenv": "16.4.7",
     "eslint": "9.23.0",
     "eslint-config-prettier": "10.1.1",
