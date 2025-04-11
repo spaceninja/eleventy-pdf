@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "2.0.1",
-    "dotenv": "16.4.7",
+    "dotenv": "16.5.0",
     "eslint": "9.24.0",
     "eslint-config-prettier": "10.1.2",
     "node-fetch": "3.3.2",
