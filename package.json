@@ -34,7 +34,7 @@
     "rehype-parse": "9.0.1",
     "rehype-stringify": "10.0.1",
     "sass": "1.89.0",
-    "stylelint": "16.19.1",
+    "stylelint": "16.20.0",
     "stylelint-config-spaceninja": "15.0.0",
     "unified": "11.0.5"
   }
